@@ -2,8 +2,6 @@ name: JSON to CSV Conversion
 
 on:
   push:
-    branches:
-      - main
 
 jobs:
   convert_json_to_csv:
