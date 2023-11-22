@@ -1,5 +1,6 @@
 import json
 import csv
+from pathlib import Path
 
 def json_to_csv(json_file, csv_file):
     with open(json_file, 'r') as json_input:
@@ -22,6 +23,7 @@ def json_to_csv(json_file, csv_file):
             writer.writerow(data)
 
 # Replace 'input.json' and 'output.csv' with your actual file names
-json_file_path = '/test/test.json'
+json_file_path = Path(__file__).parents[1] / 'test/test.json'
+#json_file_path = '/test/test.json'
 csv_file_path = 'output.csv'
 json_to_csv(json_file_path, csv_file_path)
